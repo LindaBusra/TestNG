@@ -31,7 +31,7 @@ public class homework1 {
         HomePage homePage = new HomePage();
         LoginPage loginPage = new LoginPage();
         homePage.homePageLoginLink.click();
-        loginPage.email.sendKeys("jack@gmail.com");
+        loginPage.userName.sendKeys("jack@gmail.com");
         loginPage.password.sendKeys("11111");
         loginPage.loginButton.click();
 

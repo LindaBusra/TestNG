@@ -7,47 +7,43 @@ import techproed.utilities.Driver;
 
 public class HomePage {
 
-    //https://www.bluerentalcars.com/
+        public HomePage() {
+                PageFactory.initElements(Driver.getDriver(), this);
+        }
 
-    public HomePage(){  //one java class
-        PageFactory.initElements(Driver.getDriver(),this);    //get elements from pages which driver points.
-    }
+        @FindBy(partialLinkText = "Login")
+        public WebElement homePageLoginLink;
 
+        @FindBy(id = "dropdown-basic-button")
+        public WebElement userID;
 
-    @FindBy(partialLinkText = "Login")
-    public WebElement homePageLoginLink;
+        @FindBy(xpath = "//select[@name='car']")
+        public WebElement selectACar;
 
-    @FindBy(id = "dropdown-basic-button")
-    public WebElement userID;
+        @FindBy(name = "pickUpLocation")
+        public WebElement pickUpLocation;
 
+        @FindBy(name = "dropOfLocation")
+        public WebElement dropOfLocation;
 
-    @FindBy(xpath = "//select[@name='car']")
-    public WebElement selectACar;
+        @FindBy(name = "pickUpDate")
+        public WebElement pickUpDate;
 
-    @FindBy(name = "pickUpLocation")
-    public WebElement pickUpLocation;
+        @FindBy(name = "pickUpTime")
+        public WebElement pickUpTime;
 
-    @FindBy(name = "dropOfLocation")
-    public WebElement dropOfLocation;
+        @FindBy(name = "dropOffDate")
+        public WebElement dropOffDate;
 
-    @FindBy(name = "pickUpDate")
-    public WebElement pickUpDate;
+        @FindBy(name = "dropOffTime")
+        public WebElement dropOffTime;
 
-    @FindBy(name = "pickUpTime")
-    public WebElement pickUpTime;
+        @FindBy(xpath = "//button[@type='submit']")
+        public WebElement continueReservationButton;
 
-    @FindBy(name = "dropOffDate")
-    public WebElement dropOffDate;
+        @FindBy(linkText = "Logout")
+        public WebElement logoutLink;
 
-    @FindBy(name = "dropOffTime")
-    public WebElement dropOffTime;
-
-    @FindBy(xpath = "//button[@type='submit']")
-    public WebElement continueReservationButton;
-
-    @FindBy(xpath = "//*[.='Please first login']")
-    public WebElement pleaseFirstLoginText;
-
-
+        @FindBy(xpath = "//button[text()='OK']")
+        public WebElement OK;
 }
-

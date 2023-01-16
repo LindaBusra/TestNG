@@ -39,7 +39,7 @@ public class Day19_ReservationTest {
 
 //        sending credentials and clicking on login button
         ReusableMethods.waitFor(3);
-        loginPage.email.sendKeys("jack@gmail.com");
+        loginPage.userName.sendKeys("jack@gmail.com");
         ReusableMethods.waitFor(3);
         loginPage.password.sendKeys("12345");
         ReusableMethods.waitFor(3);

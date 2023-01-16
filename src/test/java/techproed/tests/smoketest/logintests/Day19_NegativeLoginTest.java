@@ -48,7 +48,7 @@ public class Day19_NegativeLoginTest {
 
 //        sending credentials and clicking on login button
         ReusableMethods.waitFor(3);
-        loginPage.email.sendKeys("fake@bluerentalcars.com");
+        loginPage.userName.sendKeys("fake@bluerentalcars.com");
         ReusableMethods.waitFor(3);
         loginPage.password.sendKeys("fakepass");
         ReusableMethods.waitFor(3);
@@ -84,7 +84,7 @@ public class Day19_NegativeLoginTest {
         ReusableMethods.waitFor(3);
         faker = new Faker();
         String fakeEmail = faker.internet().emailAddress();
-        loginPage.email.sendKeys(fakeEmail);
+        loginPage.userName.sendKeys(fakeEmail);
         ReusableMethods.waitFor(3);
         loginPage.password.sendKeys(faker.internet().password(4,6));  //fake pass 4-6  digits
         ReusableMethods.waitFor(3);

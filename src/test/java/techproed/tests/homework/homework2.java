@@ -7,11 +7,10 @@ import techproed.utilities.ConfigReader;
 import techproed.utilities.Driver;
 import techproed.utilities.ReusableMethods;
 
-public class UserStory4 {
+public class homework2 {
 
     /*
-
-Name:
+    Name:
 Login screen error messages
 Description:
 User should see error message when an invalid email is entered
@@ -22,14 +21,15 @@ When I enter a valid email domain, then I should not see the error message
 https://email-verify.my-addr.com/list-of-most-popular-email-domains.php
      */
 
+    HomePage homePage;
+    LoginPage loginPage;
+
     @Test
     public void test(){
 
         Driver.getDriver().get(ConfigReader.getProperty("app_home_url"));
         HomePage homePage = new HomePage();
         LoginPage loginPage = new LoginPage();
-
-
         homePage.homePageLoginLink.click();
         loginPage.userName.sendKeys("jacksongmail.com");
         loginPage.password.sendKeys("11111");
@@ -38,25 +38,13 @@ https://email-verify.my-addr.com/list-of-most-popular-email-domains.php
         //verify user should be able to see error message when user dont write valid email
         ReusableMethods.verifyElementDisplayed(loginPage.invalidEmailMessage);
 
+
         //When I enter a valid email domain, then I should not see the error message
         Driver.getDriver().navigate().refresh();
-
-        loginPage.userName.sendKeys("emilyjackson@gmail.com");
-        loginPage.password.sendKeys("11111");
+        loginPage.userName.sendKeys("jack@gmail.com");
+        loginPage.password.sendKeys("12345");
         ReusableMethods.verifyElementNotDisplayed(loginPage.invalidEmailMessage);
-
-
-
-
-
-
-
-
-
-
-
-
-
+        loginPage.loginButton.click();
     }
-}
 
+}
