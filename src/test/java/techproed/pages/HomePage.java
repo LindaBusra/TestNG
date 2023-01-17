@@ -7,6 +7,10 @@ import techproed.utilities.Driver;
 
 public class HomePage {
 
+
+        //    https://www.bluerentalcars.com/
+
+
         public HomePage() {
                 PageFactory.initElements(Driver.getDriver(), this);
         }

@@ -71,9 +71,9 @@ public class Day19_NegativeLoginTest {
     @Test
     public void invalidCredsTest() throws IOException {
 
-//going blue rental car home page
+//        As customer, I should not be able to log in the application
+        //going blue rental car home page
         Driver.getDriver().get(ConfigReader.getProperty("app_home_url"));
-
 //        click on home page login link
         homePage = new HomePage();
         loginPage= new LoginPage();
@@ -82,25 +82,22 @@ public class Day19_NegativeLoginTest {
 
 //        sending credentials and clicking on login button
         ReusableMethods.waitFor(3);
-        faker = new Faker();
+
+//        Customer email: fake@bluerentalcars.com
+//        Customer password: fakepass
+        faker=new Faker();
         String fakeEmail = faker.internet().emailAddress();
         loginPage.userName.sendKeys(fakeEmail);
         ReusableMethods.waitFor(3);
-        loginPage.password.sendKeys(faker.internet().password(4,6));  //fake pass 4-6  digits
+        loginPage.password.sendKeys(faker.internet().password(4,6));//fake pass 4-6 digit
         ReusableMethods.waitFor(3);
         loginPage.loginButton.click();
         ReusableMethods.waitFor(3);
 
-
-//    Error: User with fake@bluerentalcars.com not found
-
-        String errorMessage =  loginPage.errorMessage_incorrectEmailPass.getText();
-        Assert.assertEquals(errorMessage,"User with email "+ fakeEmail + " not found" );
+//        Error: User with email fake@bluerentalcars.com not found
+        String errorMessage = loginPage.errorMessage_incorrectEmailPass.getText();
+        Assert.assertEquals(errorMessage,"User with email "+fakeEmail+" not found");
         ReusableMethods.getScreenshot("NegativeLoginScreenshot");
         Driver.closeDriver();
-
-        // if this error message is displyed or not,
-//        ReusableMethods.waitForVisibility(loginPage.errorMessage,10);  // we can use this one also.
-
     }
 }

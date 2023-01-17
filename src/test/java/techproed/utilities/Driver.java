@@ -56,8 +56,8 @@ public class Driver {               //Basic Driver Class
 
         }
 
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));   //this is not hard wait
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));     //pageLoadTimeOut coming from Selenium
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));   //this is not hard wait
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));     //pageLoadTimeOut coming from Selenium
         driver.manage().window().maximize();
         return driver;
 

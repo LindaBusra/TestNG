@@ -1,4 +1,4 @@
-package techproed.tests;
+package techproed.tests.MyPractice;
 
 import org.testng.annotations.Test;
 
