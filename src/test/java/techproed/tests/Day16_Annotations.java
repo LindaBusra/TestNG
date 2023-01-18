@@ -26,7 +26,6 @@ public class Day16_Annotations {
         System.out.println("After Suite");
     }
 
-
     @BeforeTest
     public void beforeTest(){
         System.out.println("Before Test");
@@ -47,7 +46,6 @@ public class Day16_Annotations {
         System.out.println("After Class");
     }
 
-
     @BeforeMethod
     public void beforeMethod(){
         System.out.println("Before Method");
@@ -58,48 +56,34 @@ public class Day16_Annotations {
         System.out.println("After Method");
     }
 
-
     @Test(priority = 2)
     public void test1(){
         System.out.println("test1");
     }
 
-
-    @Ignore     //it is coming from testng
+    @Ignore
     @Test
     public void test2(){
         System.out.println("test2");
     }
 
-
-    @Test(enabled = false)      //test3 does not executed
+    @Test(enabled = false)
     public void test3(){
         System.out.println("test3");
     }
 
-
-    @Test(priority = -3)            //lowest number executes first
+    @Test(priority = 3)
     public void test4(){
         System.out.println("test4");
     }
 
-
-    @Test(priority = 1)
+    @Test(priority = 1,groups = "minor-regression-group")
     public void test5(){
         System.out.println("test5");
     }
 
-    @Test(dependsOnMethods =  "test5")              //connect wih test5
-    public void searchTest(){
-        System.out.println("This is search test");
-    }
-
-
-    @Test
+    @Test(groups = "minor-regression-group")
     public void test6(){
         System.out.println("test6");
     }
-
-
-
 }

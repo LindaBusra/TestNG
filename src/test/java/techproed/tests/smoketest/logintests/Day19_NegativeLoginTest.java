@@ -33,7 +33,7 @@ public class Day19_NegativeLoginTest {
 
     Faker faker;
 
-    @Test
+    @Test(groups = "minor-regression-group")
     public void US100208_Negative_Login() throws IOException {
 
 //        As customer, I should not be able to log in the application

@@ -1,0 +1,42 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Blue Rental Car" verbose="1" >
+    <!-- listener tag is used to add listeners -->
+    <listeners>
+        <!-- path of the Listener Utility class -->
+        <listener class-name="techproed.utilities.Listeners"></listener>
+    </listeners>
+
+    <test name="Login Test Classes" >
+
+
+        <classes>
+            <!--Running ListenersTest2 class -->
+            <class name="techproed.tests.listeners.ListenersTest2" />
+        </classes>
+    </test>
+</suite>
+
+<!--
+onStart(ITestContext arg0)
+Invoked after the test class is instantiated and before any configuration method is called.
+
+onFinish(ITestContext arg0)
+Invoked after all the tests have run and all their Configuration methods have been called.
+
+onTestFailure(ITestResult result)
+Invoked each time when a test fails.
+
+onTestSkipped(ITestResult arg0)
+Invoked each time when a test skips.
+
+onTestStart(ITestResult arg0)
+Invoked each time before a test will be invoked.
+
+onTestSuccess(ITestResult arg0)
+Invoked each time when a test succeeds.
+
+onTestFailedButWithinSuccessPercentage(ITestResult arg0)
+IInvoked each time a method fails but has been annotated with successPercentage and this failure still keeps it within the
+success percentage requested.
+
+-->

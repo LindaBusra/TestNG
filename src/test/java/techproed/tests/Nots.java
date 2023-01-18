@@ -54,5 +54,7 @@ We can schedule with Jenkins Job... we can say run this smoke test folder 07.00 
 you give github link to Jenkins.
 
 we have about 20 testcases in out smoke test. It depends on how long en test case is actually.
+
+
      */
 }

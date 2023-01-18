@@ -4,7 +4,7 @@
         <classes>
 
             <class name="techproed.tests.smoketest.logintests.Day18_PositiveLoginTest" />
-            <class name="techproed.tests.smoketest.logintests.Day19_NegativeLoginTest" />
+            <class name="techproed.tests.smoketest.logintests.Day19_NegativeLoginTest" />   <!-- this class must be after positiveLoginText  because of flow  -->
             <class name="techproed.tests.dataprovider.Day21_DataProvider2" />
             <class name="techproed.tests.dataprovider.Day21_DataProvider3" />
             <class name="techproed.tests.excelautomation.Day20_ExcelLogin" />

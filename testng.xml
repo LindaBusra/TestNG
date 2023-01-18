@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <!--Attaching the Listeners -->
+        <listener class-name="techproed.utilities.Listeners"></listener>
+    </listeners>
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/busra/IdeaProjects/testNGProject/src/test/java/techproed/tests/listeners/ListenersTest3.java">
+        <classes>
+            <class name="techproed.tests.listeners.ListenersTest3">
+                <methods>
+                    <include name="US100201_Admin_Login"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
+
+
+<!--  File->settings->plugins->marketplace->install  testng xml ->and come back and refresh
+       rigt click on class->create TestNG XML->in creates automatically testng.xml file under project level
+      open it, select all text->go Code->select reformat file->and run -->

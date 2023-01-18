@@ -3,6 +3,7 @@ package techproed.tests.MyPractice;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 import techproed.pages.HmcPage;
 import techproed.utilities.ConfigReader;
@@ -10,6 +11,7 @@ import techproed.utilities.Driver;
 public class C03_HotelMyCampTestClass {
 
 
+    @Ignore
     @Test(groups = "gp2")
     public void test01() {
 

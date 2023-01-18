@@ -4,6 +4,7 @@ import com.github.javafaker.Faker;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 import techproed.pages.HmcPage;
 import techproed.utilities.ConfigReader;
@@ -11,7 +12,9 @@ import techproed.utilities.Driver;
 
 
 public class C03_E2ETest {
-    @Test
+
+    @Ignore
+    @Test()
     public void E2ETest() throws InterruptedException {
         //https://www.hotelmycamp.com adresine git.
         Driver.getDriver().get(ConfigReader.getProperty("hmcUrl"));
