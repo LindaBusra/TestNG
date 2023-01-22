@@ -19,7 +19,7 @@ public class Day21_DataProvider1 {
     In Data provider method, I use @DataProvider annotation, in Test method I give the method name in the parameter
 
     Data Provider has 2 parameters.:
-    1.name : Used to give custom name for Data Provider (We can override this name. I can give speciall name to that.)
+    1.name : Used to give custom name for Data Provider (We can override this name. I can give specially name to that.)
     2.parallel : Used to do parallel testing. Default is parallel = false. We can make parallel. = true
  */
 

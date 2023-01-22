@@ -6,7 +6,7 @@ public class Day16_Annotations {
     /*
     suite > test > group > class > method
     @Test : creates test case
-    @Before and @After : 10 before and after annotations. The are used to control FLOW and DESIGN of the tests
+    @Before and @After : before and after annotations. They are used to control FLOW and DESIGN of the tests
     @Ignore: Skip test case
     @Test(enable=false) : Disable the test case. By default enable = true.
     @Test(priority=number) : prioritize/order test case execution.

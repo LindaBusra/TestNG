@@ -6,11 +6,12 @@ import org.testng.SkipException;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import techproed.utilities.Driver;
+import techproed.utilities.ReusableMethods;
 
         /*
     https://testng.org/doc/documentation-main.html#testng-listeners
 
-    //Listeners-->they ara interfaces  og coming from TestNG.
+    //Listeners-->they arE interfaces  og coming from TestNG.
 
     1. In utilities package, create a Listeners class
     Listeners class has all ITestListeners methods. That class Implements ITestListeners interface. This is like a TestBase class
@@ -45,6 +46,7 @@ public class ListenersTest1 {
     public void test2(){
         System.out.println("Test case 2 FAIL");
         Assert.assertTrue(false);//FAILS
+
     }
     @Test
     public void test3(){

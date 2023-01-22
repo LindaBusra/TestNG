@@ -6,10 +6,13 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import techproed.pages.XYZBankPage;
 import techproed.utilities.ConfigReader;
 import techproed.utilities.Driver;
+import techproed.utilities.JSUtils;
+import techproed.utilities.ReusableMethods;
 
 import static org.testng.AssertJUnit.assertEquals;
 import static org.testng.AssertJUnit.assertTrue;
@@ -93,17 +96,19 @@ Then
     Assert that number of customers is 0
 
  */
-    @Test
+    @Test(groups="smoke-test")
     public void xyzBankTest() {
         XYZBankPage xyzBankPage = new XYZBankPage();
 //        Go to url https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login
         Driver.getDriver().get(ConfigReader.getProperty("xyzBank_URL"));
 
 //        Click on "Bank Manager Login" button
-        xyzBankPage.bankManagerLoginButton.click();
+        JSUtils.clickElementByJS(xyzBankPage.bankManagerLoginButton);
+//        xyzBankPage.bankManagerLoginButton.click();
 
 //        Click on "Add Customer" button
-        xyzBankPage.addCustomerButton.click();
+        JSUtils.clickElementByJS(xyzBankPage.addCustomerButton);
+//        xyzBankPage.addCustomerButton.click();
 
 //        Fill inputs and click on "Add Customer" submit button
         Faker faker = new Faker();
@@ -134,6 +139,7 @@ Then
 
         for (int i=6; i<11; i++){
 //        Click on "Currency" dropdown
+
             customerDD.selectByIndex(i);
 //        Select "Dollar"
             currencyDD.selectByIndex(1);
@@ -216,5 +222,11 @@ Then
 //        Assert that number of customers is 0
         assertEquals(0, xyzBankPage.deleteButtonList.size());
 
+    }
+
+    @AfterMethod
+    public void tearDown(){
+        ReusableMethods.waitFor(3);
+        Driver.closeDriver();
     }
 }

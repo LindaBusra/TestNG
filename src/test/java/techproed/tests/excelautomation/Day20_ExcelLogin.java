@@ -20,6 +20,7 @@ public class Day20_ExcelLogin {
     ExcelUtils excelUtils;
     //    will store excel data
     List<Map<String,String>> allTestData;
+
     //    1. Create a login method
     public void login(){
 
@@ -49,12 +50,15 @@ public class Day20_ExcelLogin {
 
     @Test
     public void customerLoginTest(){
+
         String path="./src/test/java/resources/mysmoketestdata.xlsx";
         String sheetName = "customer_info";
         excelUtils=new ExcelUtils(path,sheetName);
+
 //        getDataList() method returns all excel data
 //        we stored that data in allTestData variable
         allTestData=excelUtils.getDataList();
+
 //        System.out.println(allTestData);
 //        System.out.println(excelUtils.getColumnsNames());
 //        System.out.println(excelUtils.getCellData(2,1));
@@ -68,6 +72,7 @@ public class Day20_ExcelLogin {
             ReusableMethods.waitFor(1);
             loginPage.loginButton.click();
             ReusableMethods.waitFor(1);
+
 //            Verify if login is successful
 //            IF USER ID IS DISPLAYED THEN LOGIN IS SUCCESSFUL
             ReusableMethods.verifyElementDisplayed(homePage.userID);
@@ -100,7 +105,7 @@ public class Day20_ExcelLogin {
         click on login Button
         I AM ON HOME PAGE AGAIN
         *****************
-         click on user id
+        click on user id
         click on log out
         click on ok                     ----->>>>>>2nd TRY CATCH -> logIn
         I AM ON HOME PAGE AGAIN

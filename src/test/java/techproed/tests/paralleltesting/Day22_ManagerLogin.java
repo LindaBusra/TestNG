@@ -15,6 +15,8 @@ public class Day22_ManagerLogin {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         driver.get("https://www.bluerentalcars.com/login");
+
+
         driver.findElement(By.id("formBasicEmail")).sendKeys("sam.walker@bluerentalcars.com");
         Thread.sleep(2000);
         driver.findElement(By.id("formBasicPassword")).sendKeys("c!fas_art");

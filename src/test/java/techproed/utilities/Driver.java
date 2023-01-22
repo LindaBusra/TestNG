@@ -48,6 +48,8 @@ public class Driver {               //Basic Driver Class
                     WebDriverManager.edgedriver().setup();
                     driver = new EdgeDriver();
                     break;
+
+
              }
 
 
@@ -56,8 +58,8 @@ public class Driver {               //Basic Driver Class
 
         }
 
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));   //this is not hard wait
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));     //pageLoadTimeOut coming from Selenium
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(35));   //this is not hard wait
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(25));     //pageLoadTimeOut coming from Selenium
         driver.manage().window().maximize();
         return driver;
 

@@ -1,21 +1,21 @@
 package techproed.tests.listeners;
 
-
 import org.testng.annotations.Test;
 import techproed.pages.HomePage;
 import techproed.pages.LoginPage;
 import techproed.utilities.ConfigReader;
 import techproed.utilities.Driver;
 import techproed.utilities.ReusableMethods;
+
+//File-->settings-->plugins-->marketplace-->install  testng xml ->and come back and refresh
+//rigt click on class-->create TestNG XML-->in creates automatically testng.xml file under project level
+//open it, select all text-->go Code-->select reformat file-->and run
+
+
 public class ListenersTest3 {
-
-    //File-->settings-->plugins-->marketplace-->install  testng xml ->and come back and refresh
-    //rigt click on class-->create TestNG XML-->in creates automatically testng.xml file under project level
-    //open it, select all text-->go Code-->select reformat file-->and run
-
-
     HomePage homePage;
     LoginPage loginPage;
+
 
     @Test
     public void US100201_Admin_Login(){
@@ -30,7 +30,7 @@ public class ListenersTest3 {
         ReusableMethods.waitFor(3);
         loginPage.userName.sendKeys("jack@gmail.com");
         ReusableMethods.waitFor(3);
-        loginPage.password.sendKeys("12345");
+        loginPage.password.sendKeys("1234563");//12345 is correct, SENDING INCORRECT CREDENTIAL
         ReusableMethods.waitFor(3);
         loginPage.loginButton.click();
         ReusableMethods.waitFor(3);
@@ -41,6 +41,4 @@ public class ListenersTest3 {
         Driver.closeDriver();
     }
 }
-
-
 
