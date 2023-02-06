@@ -8,7 +8,7 @@ import techproed.utilities.Driver;
 import techproed.utilities.ReusableMethods;
 
 //File-->settings-->plugins-->marketplace-->install  testng xml ->and come back and refresh
-//rigt click on class-->create TestNG XML-->in creates automatically testng.xml file under project level
+//rigt click on class-->create TestNG XML-->in creates automatically listeners2.xml file under project level
 //open it, select all text-->go Code-->select reformat file-->and run
 
 

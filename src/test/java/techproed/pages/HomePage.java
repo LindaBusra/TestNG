@@ -50,4 +50,6 @@ public class HomePage {
 
         @FindBy(xpath = "//button[text()='OK']")
         public WebElement OK;
+
+
 }

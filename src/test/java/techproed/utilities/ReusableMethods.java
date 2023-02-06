@@ -32,7 +32,7 @@ public class ReusableMethods {
         File source = ts.getScreenshotAs(OutputType.FILE);
 
         // full path to the screenshot location
-//        String target = System.getProperty("user.dir") + "/test-output/Screenshots/" + name+ date + ".png";
+//        String target = System.getProperty("user.dir") + "/test-output/Screenshots/" + name+ date + ".png";  //you can give name
         String target = System.getProperty("user.dir") + "/test-output/Screenshots/" +  date + ".png";
 
 

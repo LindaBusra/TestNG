@@ -15,6 +15,7 @@ import techproed.utilities.Driver;
 //Add listeners tag before test in the xml file to connect Listeners and this xml file
 
 //add listener util path in the xml file
+@Listeners
 public class ListenersTest2 {
 
 

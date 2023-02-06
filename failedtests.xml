@@ -12,4 +12,5 @@
             <class name="techproed.tests.listeners.ListenersTest4" />
         </classes>
     </test>
+
 </suite>

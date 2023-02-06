@@ -2,7 +2,9 @@ package techproed.tests;
 
 import org.testng.annotations.Test;
 
-public class Day16_DependsOnMethods02 {
+import static org.testng.AssertJUnit.assertTrue;
+
+public class Day16_DependsOnMethods02  {
 
 
     @Test(priority = -2)
@@ -26,6 +28,7 @@ public class Day16_DependsOnMethods02 {
     @Test(priority = -1)
     public void test4() {
         System.out.println("test 4");
+
     }
 
 

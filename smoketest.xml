@@ -13,10 +13,10 @@
 
         verbose:the amount of information we will se on the console. The bigger number the more info
 
-        <package name="techproed.tests.logintests" />  This runs all logintests package. We starter from rot when we give name.
+        <package name="techproed.tests.smoketest.logintests"/> -> RUNS ALL LOGINTESTS PACKAGE  This runs all logintests package. We starter from rot when we give name.
 
         Save your xml file then
-        run your xml file with right click on the xml file, and run -->
+        run your xml file with right click on the xml file, and run   -->
 
 
-        <!--https://testng.org/doc/documentation-main.html#testng-xml -->
+        <!---https://testng.org/doc/documentation-main.html#testng-xml -->

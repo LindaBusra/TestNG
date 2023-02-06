@@ -6,15 +6,15 @@
                 <methods>
 
                     <!-- Run only test1 and test6 from Day16_Annotation-->
-                    <include name="test5" />     <!--<include name="test5" />  Runs test5 method -->
+                    <include name="test1" />     <!--<include name="test5" />  Runs test5 method -->
                     <include name="test6" />
                 </methods>
             </class>
 
-            <class name="techproed.tests.smoketest.logintests.Day19_NegativeLoginTest">
+            <class name="techproed.tests.smoketest.logintests.Day18_PositiveLoginTest">
                 <methods>
                     <!-- Run all but not US100208_Negative_Login from Day19_NegativeLoginTest-->
-                    <exclude name="US100208_Negative_Login" />     <!--<include name="test5" />  Runs test5 method -->
+                    <exclude name="US100208_Negative_Login" />    <!--<include name="test5" />  Runs test5 method -->
 
                 </methods>
             </class>
