@@ -26,9 +26,12 @@ public class Driver {               //Basic Driver Class
 
             switch(ConfigReader.getProperty("browser")) {
 
+//after updating it was a problem, you can fix it like that
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver();        //after Selenium 4.5 we dont use it
+                    ChromeOptions options=new ChromeOptions();
+                    options.addArguments("--remote-allow-origins=*");
+                    driver = new ChromeDriver(options);
                     break;
 
 
